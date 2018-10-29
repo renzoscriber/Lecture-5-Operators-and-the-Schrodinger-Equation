@@ -1,0 +1,74 @@
+\documentclass{article}
+% Begin Preamble
+\usepackage[utf8]{inputenc}
+\usepackage{natbib}
+\usepackage{graphicx}
+\usepackage{amsfonts}
+\usepackage{fullpage}
+\usepackage[english]{babel}
+\usepackage{color}
+\usepackage{amsmath}
+\usepackage{url}
+\usepackage{standalone}
+\usepackage{parskip}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+
+    %\graphicspath{ {./Figures/} }
+
+\title{Lecture 5: Operators and the Schr\"{o}dinger Equation}
+\author{Lauren Shriver}
+\date{October 28 2018}
+% End Preamble
+\begin{document}
+
+\maketitle
+
+\section*{Postulates Discussed So Far}
+\begin{enumerate}
+    \item Particles/systems are governed/described by \textbf{wave functions} $\Psi(x)$
+        \begin{itemize}
+            \item Each $\Psi(x)$ must be a complex number, continuous, and normalizable
+            \item Note: the derivative of the wave function with respect to $x$ need not be continuous 
+        \end{itemize}
+    \item Associated with any $\Psi(x)$ is a probability $\mathbb{P}(x)dx$
+        \begin{itemize}
+            \item Note: since $x$ is a continuous variable, we write $\mathbb{P}(x)dx$ (rather than just $\mathbb{P}(x)$) to dentoe the probability our system/particle is located somewhere in the range $(x,x+dx)$
+            \item Recall: for continuous probability distributions, the probability of our system having a discrete value is always zero
+            \item Equation for this relation: 
+                \begin{equation}
+                    \mathbb{P}(x)dx=|\Psi(x)|^2dx
+                \end{equation}
+        \end{itemize}
+    \item A wave function can be a superposition of allowed states 
+        \begin{itemize}
+            \item Example: 
+                \begin{equation}
+                    \Psi(x) = \alpha\Psi_1(x) + \beta\Psi_2(x) 
+                \end{equation}
+        \end{itemize}
+\end{enumerate}
+\section*{Postulate 4}
+For each \textbf{observable} $a$, we have an associated operator $\hat{A}$.
+\begin{itemize}
+    \item Examples so far:
+        \begin{itemize}
+            \item Momentum: $\hat{p}\equiv\frac{\hbar}{i}\frac{\partial}{\partial x}$
+            \item Position: $\hat{x}\equiv x$
+            \item Energy: $\hat{E}\equiv -\frac{\hbar^2}{2m}\frac{\partial^2}{\partial x^2} + V(x)$
+        \end{itemize}
+\end{itemize}
+\section*{Postulate 5}
+Upon measuring an observable $a$ associated with an operator $\hat{A}$, two things will occur:
+\begin{enumerate}
+    \item The measured value will be one of the eigenvalues of $\hat{A}$
+    \item After measurement, the particle/system collapses into an eigenfunction $\Psi_a$
+\end{enumerate}
+\section*{Postulate 6}
+Given an operator $\hat{A}$, we can normalize its set of eignefunctions by assuming they are all orthonormal to one another. This is summarized by the following normalization condition:
+\begin{equation}
+    \int{\psi_a^*(x) \psi_b(x) dx} = \delta_{ab}
+\end{equation}
+\section*{Schr\"{o}dinger Equation}
+\end{document}
